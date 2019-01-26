@@ -2,6 +2,14 @@
 
 This article describes the implementation detail of the CLAHE (Contrast Limited Adaptive Histogram Equalization) filter in [MetalPetal](https://github.com/MetalPetal/MetalPetal) and how it makes use of GPU acceleration to improve performance.
 
+## Previews
+
+| Before  | After |
+| ------------- | ------------- |
+| ![Example 1 Before](Assets/Example-1-Before.jpg)  | ![Example 1 After](Assets/Example-1-After.jpg) |
+| ![Example 2 Before](Assets/Example-2-Before.jpg)  | ![Example 2 After](Assets/Example-2-After.jpg) |
+| ![Example 3 Before](Assets/Example-3-Before.jpg)  | ![Example 3 After](Assets/Example-3-After.jpg) |
+
 ## What is CLAHE
 
 CLAHE (Contrast Limited Adaptive Histogram Equalization) is an algorithm for enhancing local contrast in images, and is frequently used in application areas like underwater photography, traffic control, astronomy, and medical imaging. 
@@ -15,14 +23,6 @@ Histogram equalization (HE) is a method in image processing of contrast adjustme
 Adaptive histogram equalization (AHE) differs from ordinary histogram equalization in the respect that the adaptive method computes several histograms, each corresponding to a distinct section of the image, and uses them to redistribute the lightness values of the image. It is therefore suitable for improving the local contrast and enhancing the definitions of edges in each region of an image.
 
 AHE has a tendency to overamplify noise in relatively homogeneous regions of an image. A variant of adaptive histogram equalization called contrast limited adaptive histogram equalization (CLAHE) prevents this by limiting the amplification.
-
-## Previews
-
-| Before  | After |
-| ------------- | ------------- |
-| ![Example 1 Before](Assets/Example-1-Before.jpg)  | ![Example 1 After](Assets/Example-1-After.jpg) |
-| ![Example 2 Before](Assets/Example-2-Before.jpg)  | ![Example 2 After](Assets/Example-2-After.jpg) |
-| ![Example 3 Before](Assets/Example-3-Before.jpg)  | ![Example 3 After](Assets/Example-3-After.jpg) |
 
 ## Recipes for CLAHE
 
